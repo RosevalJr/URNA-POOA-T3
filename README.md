@@ -43,6 +43,7 @@ Para projetar a segunda funcionalidade foi utilizado o padrão de projeto **Stra
   <b>Figura 3: Utilização do padrão de projeto **Strategy** para arquiteturar a segunda funcionalidade.</b>
 </div>
 
+
 Portanto, as classes envolvidas nesta funcionalidade respeitam o principio SRP, sendo que cada classe possue apenas uma resposanbilidade para com a funcionalidade. Também respeitam o princípio de OCP, sendo que para realizar a extensão de utilização de um novo meio de output para mostrar a votação, simplesmente é precisso criar uma nova classe que herda da classe interface ``OutputMostraVotacao`` e possue como argumento uma classe que interage com o novo mecanimos de hardware projetado. Por fim, essa nova classe irá implementar o método **Strategy** herdado. Para essa nova funcionalidade seja utilizada pela urna, a classe ``Urna`` deve instanciar uma nova instancia da nova classe criada. Dessa forma, quando o método ``ProcedimentoMostraVotacao`` da classe ``Urna`` for chamado, o método **Strategy** implementado da nova classe será chamado e a nova adição a funcionalidade será executada. Além disso, também respeita o princípio de LSP sendo que os contratos entre os tipos das classes são respeitados, qualquer uma das classes que implementam o método **Strategy** substituem a classe interface ``OutputMostraVotacao``. Por fim, também respeita o princípio de ISP, sendo que cada um dos módulos enxergam apenas os métodos que são utilizados, no caso apenas o método **Strategy** herdado.
 
 # F3: Receber o voto do eleitor
