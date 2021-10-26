@@ -22,7 +22,7 @@ Inicialmente, é importante destacar a estrutura geral da solução arquitetural
 
 ![Figura 1](https://raw.githubusercontent.com/RosevalJr/URNA-POOA-T3/main/imgsDoReadme/Fig1.png)
 <div align="center">
- *Figura 1: Classe ``Urna``, utilizada como cliente de todas as funcionalidades.*
+  <b>Figura 1: Classe ``Urna``, utilizada como cliente de todas as funcionalidades.</b>
 </div>
 
 # F1: Receber comandos do mesário para iniciar uma nova votação
