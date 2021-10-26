@@ -21,7 +21,7 @@ Para especificar a descrição arquitetural da solução de software projetada p
 Inicialmente, é importante destacar a estrutura geral da solução arquitetural criada. A classe ``Urna`` foi criada para funcionar como o cliente de todas as funcionalidades projetadas nesta solucação. Essa classe é responsável por instanciar todas as classes desejadas das funcionalidades e executar seus métodos *Strategy*. Sendo assim, todos os diferentes mecanimos são opcionais na urna projetada. Cabendo ao cliente (``Urna``) escolher quais funcionalidades serão executadas pela urna. Como pode ser observado na Figura 1, a classe ``Urna`` possui argumentos do tipo *list* para cada uma das classes interface *Strategy*, sendo que nos métodos "processo" apenas é chamado o método strategy de cada uma das interfaces instanciadas como desejado no cliente. E no método ``votacao`` é chamado cada um dos métodos "processo" ligados a execução da votação, por fim o voto é armazenado chamando o seu processo respectivo de estratégias de armazenamento interno. Também, é importante destacar que as informações dos candidatos utilizados na votação é inserido na urna manualmente também utilizando o strateygy ligado ao armazenamento interno de cadndidaotos. A seguir será feito uma detalhamento minuncioso da solução propostao no diagrama UML para cada uma das funcionalidades.
 
 ![Figura 1](https://raw.githubusercontent.com/RosevalJr/URNA-POOA-T3/main/imgsDoReadme/Fig1.png)
-*Legenda da imagem*
+<center>*Figura 1: Classe ``Urna``, utilizada como cliente de todas as funcionalidades.*</center>
 
 # F1: Receber comandos do mesário para iniciar uma nova votação
 
