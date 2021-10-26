@@ -40,7 +40,7 @@ Para projetar a segunda funcionalidade foi utilizado o padrão de projeto **Stra
 
 ![Figura 3](https://raw.githubusercontent.com/RosevalJr/URNA-POOA-T3/main/imgsDoReadme/Fig3.jpeg)
 <div align="center">
-  <b>Figura 3: Utilização do padrão de projeto **Strategy** para arquiteturar a segunda funcionalidade.</b>
+  <b>Figura 3: Utilização do padrão de projeto Strategy para arquiteturar a segunda funcionalidade.</b>
 </div>
 
 
