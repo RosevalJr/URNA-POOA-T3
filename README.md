@@ -55,9 +55,3 @@ A terceira funcionalidade é demonstrada pela parte mais a direita do modelo UML
 Por fim, irei fazer um detalhamento de cada um dos principios pensando no projeto como um todo, e como cada funcionalidade é opcional para utilizar a urna eletrônica, possibilitando sua toda flexibilidade na utilização de suas funcionalidades.
 
 Por fim, é possivel observar que o projeto idealizado da urna eletronica respeita os princípios SOLI. (Fazer isso la em cima mesmo)
-
-
-## Como foram distribuidas as responsabilidades e por que?
-## Como o projeto pode ser estendido sem causar impacto no restante da arquitetura?
-## O "contrato" de cada tipo é respetado, independente da instância real daquele tipo?
-## Como está a dependência entre as classes/módulos/funções? Um móduolo exerga apenas aquilo que precisa do outro?
