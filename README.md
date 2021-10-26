@@ -27,7 +27,12 @@ Inicialmente, é importante destacar a estrutura geral da solução arquitetural
 
 # F1: Receber comandos do mesário para iniciar uma nova votação
 
-A primeira funcionalidade faz com que seja necessário uma forma de comunicação entre o mesario e urna. Dessa forma, foi idealizada a classe "MesarioInput" que é responsavel por ler os comandos do mesário. Essa classe é utilizada pela classe "urna" para ler a entrada do mesario e souber quando a votação deve ser inicializada.
+A primeira funcionalidade faz com que seja necessário uma forma de comunicação entre o mesario e urna. Diante disso, foi idealizada a classe ``MesarioInput`` que é responsavel por receber os comandos do mesário através de seu método ``, como pode ser observado na Figure 2. Essa classe é utilizada pela classe "urna" para ler a entrada do mesario e saber quando a votação deve ser inicializada.
+
+![Figura 2](https://raw.githubusercontent.com/RosevalJr/URNA-POOA-T3/main/imgsDoReadme/Fig1.png)
+<div align="center">
+  <b>Figura 2: Classe ``MesarioInput``, utilizada como cliente de todas as funcionalidades.</b>
+</div>
 
 # F2: Informar o eleitor sobre a votação
 
