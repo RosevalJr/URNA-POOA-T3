@@ -22,7 +22,7 @@ Inicialmente, é importante destacar a estrutura geral da solução arquitetural
 
 ![Figura 1](https://raw.githubusercontent.com/RosevalJr/URNA-POOA-T3/main/imgsDoReadme/Fig1.png)
 <div align="center">
-  <b>Figura 1: Classe ``Urna``, utilizada como cliente de todas as funcionalidades.</b>
+  <b>Figura 1: Classe "Urna", utilizada como cliente de todas as funcionalidades.</b>
 </div>
 
 # F1: Receber comandos do mesário para iniciar uma nova votação
@@ -31,7 +31,7 @@ A primeira funcionalidade faz com que seja necessário uma forma de comunicaçã
 
 ![Figura 2](https://raw.githubusercontent.com/RosevalJr/URNA-POOA-T3/main/imgsDoReadme/Fig2.jpeg)
 <div align="center">
-  <b>Figura 2: Classe ``MesarioInput``, responsável por receber o input do mesário.</b>
+  <b>Figura 2: Classe "MesarioInput", responsável por receber o input do mesário.</b>
 </div>
 
 # F2: Informar o eleitor sobre a votação
