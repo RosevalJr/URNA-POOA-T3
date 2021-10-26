@@ -8,7 +8,7 @@
 
 > Para o maior detalhamento desta arquitetura projetada, com explicações mais detalhadas de suas funcionalidades, funcionamento e especificações para sua extensão, o seguinte vídeo explicativo foi gravado e postado no youtube: <https://youtu.be/mXFNUSFyVDY>
 
-Neste repositório, é apresentado o projeto de sistema de software para uma urna eletrônica. No documento de requisitos disponibilizado pelo professor é feita a especificação detalhada do funcionamento de cada funcionalidade, além de especificar quais partes de hardware da urna que serão utilziadas em cada funcionalidade. Esse sistema de software é capaz de realizar 4 funções bàsicas. 
+Neste repositório, é apresentado o projeto de sistema de software para uma urna eletrônica. No documento de requisitos disponibilizado pelo professor é feita a especificação detalhada do funcionamento de cada funcionalidade, além de especificar quais partes de hardware da urna que serão disponibilizadas para cada funcionalidade. Esse sistema de software é capaz de realizar 4 funções bàsicas. 
 - F1: Receber comandos do mesário para iniciar uma nova votação;
 - F2: Informar o eleitor sobre a votação;
 - F3: Receber o voto do eleitor;
