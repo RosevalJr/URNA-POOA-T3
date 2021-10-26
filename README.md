@@ -14,7 +14,7 @@ Neste repositório, é apresentado o projeto de sistema de software para uma urn
 - F3: Receber o voto do eleitor;
 - F4: Registrar o voto do eleitor;
 
-Para evitar o design especulativo, foram especificados extensões esperadas para as funcionalidades F2 e F3 da urna.
+Com o intuito de evitar o design especulativo, foram especificadas extensões esperadas para as funcionalidades F2 e F3 da urna.
 
 Para especificar a descrição arquitetural da solução de software projetada pelo autor, foi produzido um diagrama de classes com a Unified Modeling Language (UML). Esse modelo UML especifica todas as classes idealizadas para o funcionamento do sistema, juntamente com as cardinalidades e respectivas relações entre as classes idealizadas. A seguir será feito e detalhamento de como essas funcionalidades foram idealizadas pelo autor e expressadas no modelo UML de classes produzido. Também, será destacado como o arquitetura idealizada respeita os princípios SOLI e pensamentos levados em conta para evitar a quebra de certos princípios.
 
