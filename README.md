@@ -48,7 +48,23 @@ Portanto, as classes envolvidas nesta funcionalidade respeitam o principio SRP, 
 
 # F3: Receber o voto do eleitor
 
-A terceira funcionalidade é demonstrada pela parte mais a direita do modelo UML, e assim como a segunda funcionalidade o strategy também foi utilizado para sua idealização. Neste caso tem-se a classe interface que define a assinatura do strategy, as classe que herdam da classe strategy e implementam o strategy, e utilizam a classe que tem contato direto com os meios de input da urna. Diante disso, é possivel realizar a extensão desta funcionalidade dado que é apenas necessário realizar a implementação de uma nova classe que implementa o strategy e ter como argumento a classe com contato direito com o novo input criado na urna. Diante disso, é possivel observar que o contrato entre os tipos e subtipos é respeitando, sendo que o tipo pode ser substituido sobre seu subtipo. os módulos tem acesso apenas a quilo que utiliza dentro da herança do strategy.
+A terceira funcionalidade, assim como a primeira, foi projetada utilizando o padrão de projeto **Strategy**, como pode ser visualizado na Figura 4. Sendo assim, foi idealizada a classe interface ``InputPegaOpcaoVoto`` que contém a assinatura do método **Strategy** ``pegaOpcaoVoto()``. Existe as classes que implementam o método **Strategy** herdando desta classe interface, sendo elas ``TecladoFisicoPegaOpcaoVoto`` e ``TouchScreenPegaOpcaoVoto``. Cada uma dessas classes, possui como argumento uma classe que interage com o harware de input da urna, e implementa o método **Strategy** herdado a fim de captar a opção do voto do eleitor passado por um input específico.
+
+![Figura 4](https://raw.githubusercontent.com/RosevalJr/URNA-POOA-T3/main/imgsDoReadme/Fig4.jpeg)
+<div align="center">
+  <b>Figura 4: Utilização do padrão de projeto Strategy para arquiteturar a terceira funcionalidade.</b>
+</div>
+
+Além disso, para enviar o aviso que o voto foi computado com sucesso, também foi utilizado o padrão de projeto **Strategy**, como pode ser visualizado na Figura 5. A classe interface ``OutputAvisaFimVoto`` fornece a assinatura do método **Strategy** ``avisaFimVoto()``. As classes ``TelaAvisaFimVoto``, ``AudioAvisaFmVoto`` e ``MesarioAvisaFimVoto`` implementam esse método **Strategy** e cada uma delas possui como argumento uma classe que interage com um mecanismo de hardware da urna a fim de utilizar esse meio dentro da implementação do método **Strategy** para realizar o output requerido.
+
+![Figura 5](https://raw.githubusercontent.com/RosevalJr/URNA-POOA-T3/main/imgsDoReadme/Fig5.jpeg)
+<div align="center">
+  <b>Figura 5: Utilização do padrão de projeto Strategy para arquiteturar a funcionalidade de aviso de fim de voto.</b>
+</div>
+
+Por fim, essas duas caracteristicas da terceira funcionalidade podem ou não serem utilizadas pela classe ``Urna``, sendo que para serem utilizadas apenas é necessario que a classe cliente ``Urna``, instancie as classes referentes a funcionalidades desejadas
+
+Portanto, as classes referentes à essa funcionalidade respeitam o princípio de SRP, sendo que cada classe possui apenas um papel para a execução da terceira funcionalidade. Também respeitam o OCP, dado que para realizar a extensão desta funcionalidade assemelhasse a extensão da primeira funcionalidade dado a utilização do padrão de projeto **Strategy**, sendo necessária uma nova classe que implemente o método **Strategy** e tenha como argumento uma classe ligada a funcionalidade de um mecanismo de hardware da urna. Respeita também o LSP dado as classes que herdam as classes interface podem ser substiteum o tipo da classe interface em sua utilização na classe cliente ``Urna``. Por fim, também respeita o ISP, dado que todas as classes que herdam das classes interface necessitam e utilizam apenas o método **Strategy** herdado.
 
 # F4: Registrar o voto do eleitor
 Por fim, para explicar a F4 é necessario explicar como o armazenamento de votos é feito. Para essa funcionalidade também foi utilizada o padrão de projeto **Strategy**, sendo idealizado a classe ``ArmazenamentoVoto`` que contém a assinatura do método **Strategy** ``ArmazenaVoto()``. Esse método então é implementado por classes que representam as diversas estratégias de armazenamento de votos, que interagem com os mecanimos de armazenamento da urna. Sendo elas, as classes ``ArmazenamentoVotoInternet``, ``ArmazenamentoVotoInterno`` ``ArmazenamentoVotoExterno``
