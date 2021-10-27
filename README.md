@@ -67,7 +67,14 @@ Por fim, essas duas caracteristicas da terceira funcionalidade podem ou não ser
 Portanto, as classes referentes à essa funcionalidade respeitam o princípio de SRP, sendo que cada classe possui apenas um papel para a execução da terceira funcionalidade. Também respeitam o OCP, dado que para realizar a extensão desta funcionalidade assemelhasse a extensão da primeira funcionalidade dado a utilização do padrão de projeto **Strategy**, sendo necessária uma nova classe que implemente o método **Strategy** e tenha como argumento uma classe ligada a funcionalidade de um mecanismo de hardware da urna. Respeita também o LSP dado as classes que herdam as classes interface podem ser substiteum o tipo da classe interface em sua utilização na classe cliente ``Urna``. Por fim, também respeita o ISP, dado que todas as classes que herdam das classes interface necessitam e utilizam apenas o método **Strategy** herdado.
 
 # F4: Registrar o voto do eleitor
-Por fim, para explicar a F4 é necessario explicar como o armazenamento de votos é feito. Para essa funcionalidade também foi utilizada o padrão de projeto **Strategy**, sendo idealizado a classe ``ArmazenamentoVoto`` que contém a assinatura do método **Strategy** ``ArmazenaVoto()``. Esse método então é implementado por classes que representam as diversas estratégias de armazenamento de votos, que interagem com os mecanimos de armazenamento da urna. Sendo elas, as classes ``ArmazenamentoVotoInternet``, ``ArmazenamentoVotoInterno`` ``ArmazenamentoVotoExterno``
+Por fim, para explicar a F4 é necessario explicar como o armazenamento de votos é feito. Para essa funcionalidade também foi utilizada o padrão de projeto **Strategy**, sendo idealizado a classe ``ArmazenamentoVoto`` que contém a assinatura do método **Strategy** ``ArmazenaVoto()``, como pode ser observado na Figura 6. Esse método então é implementado por classes que representam as diversas estratégias de armazenamento de votos, que interagem com os mecanimos de armazenamento da urna. Sendo elas, as classes ``ArmazenamentoVotoInternet``, ``ArmazenamentoVotoInterno`` e ``ArmazenamentoVotoExterno``.
+
+![Figura 6](https://raw.githubusercontent.com/RosevalJr/URNA-POOA-T3/main/imgsDoReadme/Fig6.jpeg)
+<div align="center">
+  <b>Figura 6: Utilização do padrão de projeto Strategy para arquiteturar a quarta funcionalidade.</b>
+</div>
+
+Diante disso, é possivel destacar que as classes que envolvem essa funcionalidade respeitam o SRP, sendo que cada classe possue apenas uma resposabilidade dentro da execução da quarta funcionalidade. Também respeita o princípio OCP, sendo que para realizar a extensão desta funcionalidade não será necessario alterar código ja implementado, sendo necessario apenas implementar o método **Strategy** da classe interface ``ArmazenamentoVoto``.
 
 Por fim, irei fazer um detalhamento de cada um dos principios pensando no projeto como um todo, e como cada funcionalidade é opcional para utilizar a urna eletrônica, possibilitando sua toda flexibilidade na utilização de suas funcionalidades.
 
