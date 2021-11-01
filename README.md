@@ -5,9 +5,6 @@
 - Professor: Delano Medeiros Beder
 
 ---
-
-> Para o maior detalhamento desta arquitetura projetada, com explicações mais detalhadas de suas funcionalidades, funcionamento e especificações para sua extensão, o seguinte vídeo explicativo foi gravado e postado no youtube: <https://youtu.be/mXFNUSFyVDY>
-
 # Introdução
 
 Neste repositório, é apresentado o projeto de sistema de software para uma urna eletrônica. No documento de requisitos disponibilizado pelo professor é feita a especificação detalhada do funcionamento de cada funcionalidade, além de especificar quais partes de hardware da urna que serão disponibilizadas para cada funcionalidade. Esse sistema de software é capaz de realizar 4 funções bàsicas. 
@@ -16,9 +13,9 @@ Neste repositório, é apresentado o projeto de sistema de software para uma urn
 - F3: Receber o voto do eleitor;
 - F4: Registrar o voto do eleitor;
 
-Com o intuito de evitar o design especulativo, foram especificadas extensões esperadas para as funcionalidades F2 e F3 da urna.
+Importante destacar que, todos os mecanismos disponibilizados são opcionais na urna. O cliente deve escolher o nível de segurança, acessibilidade e auditoria que ele deseja.Além disso, com o intuito de evitar o design especulativo, foram especificadas extensões esperadas para as funcionalidades F2 e F3 da urna.
 
-Para especificar a descrição arquitetural da solução de software projetada pelo autor, foi produzido um diagrama de classes com a Unified Modeling Language (UML). Esse modelo UML especifica todas as classes idealizadas para o funcionamento do sistema, juntamente com as cardinalidades e respectivas relações entre as classes idealizadas. A seguir será feito e detalhamento de como essas funcionalidades foram idealizadas pelo autor e expressadas no modelo UML de classes produzido. Também, será destacado como o arquitetura idealizada respeita os princípios SOLI do acrônimo SOLID, e pensamentos e técnicas aplicadas para evitar a quebra de certos princípios.
+Para especificar a descrição arquitetural da solução de software projetada pelo autor, foi produzido um diagrama de classes com a Unified Modeling Language (UML). Esse modelo UML especifica todas as classes idealizadas para o funcionamento do sistema, juntamente com as cardinalidades e respectivas relações entre as classes idealizadas. A seguir será feito o detalhamento de como essas funcionalidades foram idealizadas pelo autor e expressadas no modelo UML de classes produzido. Também, será destacado como a arquitetura idealizada respeita os princípios SOLI do acrônimo SOLID, e detalhados os pensamentos e técnicas aplicadas para evitar a quebra de certos princípios.
 
 Inicialmente, é importante destacar a estrutura geral da solução arquitetural criada. A classe ``Urna`` foi criada para funcionar como o cliente de todas as funcionalidades projetadas nesta solucação. Essa classe é responsável por instanciar todas as classes desejadas das funcionalidades e executar seus métodos **Strategy**. Sendo assim, todos os diferentes mecanimos são opcionais na urna projetada, tangendo a classe cliente (``Urna``) escolher quais funcionalidades serão executadas. Como pode ser observado na Figura 1, a classe ``Urna`` possui argumentos do tipo **List** para cada uma das classes interface **Strategy**, sendo que nos métodos "Procedimento" apenas é chamado o método **Strategy** de cada uma das interfaces instanciadas como desejado no cliente. No método ``votacao()`` é chamado cada um dos métodos "Procedimento" ligados a execução da votação, por fim o voto é armazenado chamando o seu "Procedimento" respectivo de estratégias de armazenamento interno. Também, é importante destacar que as informações dos candidatos utilizados na votação são inseridas na urna manualmente, utilizando a classe **Strateygy** ligado ao armazenamento interno de cadndidaotos. A seguir será feito uma detalhamento minuncioso da solução propostao no diagrama UML para cada uma das funcionalidades.
 
