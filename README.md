@@ -28,7 +28,7 @@ Inicialmente, é importante destacar a estrutura geral da solução arquitetural
 
 A primeira funcionalidade faz com que seja necessário uma forma de comunicação entre o mesario e urna. Diante disso, foi idealizada a classe ``MesarioInput`` que é responsavel por receber os comandos do equipamento do mesário através de seu método ``ActionRecebeInput()``, como pode ser observado na Figure 2. Essa classe é utilizada pela classe ``urna`` para ler a entrada do mesário e saber quando a votação deve ser inicializada.
 
-![Figura 2](https://raw.githubusercontent.com/RosevalJr/URNA-POOA-T3/main/imgsDoReadme/Fig2.jpeg)
+![Figura 2](https://raw.githubusercontent.com/RosevalJr/URNA-POOA-T3/main/imgsDoReadme/Fig2.png)
 <div align="center">
   <b>Figura 2: Classe "MesarioInput", responsável por receber o input do mesário.</b>
 </div>
@@ -37,7 +37,7 @@ A primeira funcionalidade faz com que seja necessário uma forma de comunicaçã
 
 Para projetar a segunda funcionalidade foi utilizado o padrão de projeto **Strategy**, sendo criada a classe interface ``OutputMostraVotacao`` que contém a assinatura do método **Strategy** que mostra as informações da votação para o eleitor dado um meio de output especifico. Como a urna pode ter diversos meios de output e todos eles devem ser possiveis de utilizar em uma votação, além de possibilitar a extensão para a utilização de novos meios de output para mostrar a votação, foram criadas as classes ``BrailleMostraVotacao``, ``TelaMostrVotacao`` e ``AudioMostraVotacao``. Essas classes são responsaveis por implementar o método **Strategy** para mostrar as informações da votação ao eleitor, utilizando um mecanismo de hardware disponibilizado pela urna. Diante disso, essas classes possuem um argumento da classe que faz a interação com o mecanismo de hardware de urna como a classe ``OutputTela``. Dentro da impleementação do método **Strategy** ``MostraVotacao()`` é implementado como é feita a mostragem das informações da votação, utilizando a classe que faz interação com o hardware da urna como meio de comunicação com o hardware, como pode ser visualizado na Figura 3.
 
-![Figura 3](https://raw.githubusercontent.com/RosevalJr/URNA-POOA-T3/main/imgsDoReadme/Fig3.jpeg)
+![Figura 3](https://raw.githubusercontent.com/RosevalJr/URNA-POOA-T3/main/imgsDoReadme/Fig3.png)
 <div align="center">
   <b>Figura 3: Utilização do padrão de projeto Strategy para arquiteturar a segunda funcionalidade.</b>
 </div>
@@ -49,14 +49,14 @@ Portanto, as classes envolvidas nesta funcionalidade respeitam o principio SRP, 
 
 A terceira funcionalidade, assim como a primeira, foi projetada utilizando o padrão de projeto **Strategy**, como pode ser visualizado na Figura 4. Sendo assim, foi idealizada a classe interface ``InputPegaOpcaoVoto`` que contém a assinatura do método **Strategy** ``pegaOpcaoVoto()``. Existe as classes que implementam o método **Strategy** herdando desta classe interface, sendo elas ``TecladoFisicoPegaOpcaoVoto`` e ``TouchScreenPegaOpcaoVoto``. Cada uma dessas classes, possui como argumento uma classe que interage com o harware de input da urna, e implementa o método **Strategy** herdado a fim de captar a opção do voto do eleitor passado por um input específico.
 
-![Figura 4](https://raw.githubusercontent.com/RosevalJr/URNA-POOA-T3/main/imgsDoReadme/Fig4.jpeg)
+![Figura 4](https://raw.githubusercontent.com/RosevalJr/URNA-POOA-T3/main/imgsDoReadme/Fig4.png)
 <div align="center">
   <b>Figura 4: Utilização do padrão de projeto Strategy para arquiteturar a terceira funcionalidade.</b>
 </div>
 
 Além disso, para enviar o aviso que o voto foi computado com sucesso, também foi utilizado o padrão de projeto **Strategy**, como pode ser visualizado na Figura 5. A classe interface ``OutputAvisaFimVoto`` fornece a assinatura do método **Strategy** ``avisaFimVoto()``. As classes ``TelaAvisaFimVoto``, ``AudioAvisaFmVoto`` e ``MesarioAvisaFimVoto`` implementam esse método **Strategy** e cada uma delas possui como argumento uma classe que interage com um mecanismo de hardware da urna a fim de utilizar esse meio dentro da implementação do método **Strategy** para realizar o output requerido.
 
-![Figura 5](https://raw.githubusercontent.com/RosevalJr/URNA-POOA-T3/main/imgsDoReadme/Fig5.jpeg)
+![Figura 5](https://raw.githubusercontent.com/RosevalJr/URNA-POOA-T3/main/imgsDoReadme/Fig5.png)
 <div align="center">
   <b>Figura 5: Utilização do padrão de projeto Strategy para arquiteturar a funcionalidade de aviso de fim de voto.</b>
 </div>
@@ -68,7 +68,7 @@ Portanto, as classes referentes à essa funcionalidade respeitam o princípio de
 # F4: Registrar o voto do eleitor
 Por fim, para explicar a F4 é necessario explicar como o armazenamento de votos é feito. Para essa funcionalidade também foi utilizada o padrão de projeto **Strategy**, sendo idealizado a classe ``ArmazenamentoVoto`` que contém a assinatura do método **Strategy** ``ArmazenaVoto()``, como pode ser observado na Figura 6. Esse método então é implementado por classes que representam as diversas estratégias de armazenamento de votos, que interagem com os mecanimos de armazenamento da urna. Sendo elas, as classes ``ArmazenamentoVotoInternet``, ``ArmazenamentoVotoInterno`` e ``ArmazenamentoVotoExterno``.
 
-![Figura 6](https://raw.githubusercontent.com/RosevalJr/URNA-POOA-T3/main/imgsDoReadme/Fig6.jpeg)
+![Figura 6](https://raw.githubusercontent.com/RosevalJr/URNA-POOA-T3/main/imgsDoReadme/Fig6.png)
 <div align="center">
   <b>Figura 6: Utilização do padrão de projeto Strategy para arquiteturar a quarta funcionalidade.</b>
 </div>
