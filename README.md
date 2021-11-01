@@ -5,6 +5,8 @@
 - Professor: Delano Medeiros Beder
 
 ---
+> Este documento realiza o detalhamento solicitado pelo professor sobre o diagrama UML de classes produzido. O arquivo PDF do diagrama UML de classes da urna encontra-se neste repositório com o nome de [UML-URNA.pdf](https://github.com/RosevalJr/URNA-POOA-T3/blob/main/UML-URNA.pdf).
+
 # Introdução
 
 Neste repositório, é apresentado o projeto de sistema de software para uma urna eletrônica. No documento de requisitos disponibilizado pelo professor é feita a especificação detalhada do funcionamento de cada funcionalidade, além de especificar quais partes do hardware da urna serão disponibilizadas para cada funcionalidade. Esse sistema de software é capaz de realizar 4 funções bàsicas. 
